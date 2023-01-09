@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - name: Tag
+        id: tag-action
         uses: K-Phoen/semver-release-action@master
         with:
           release_branch: master
@@ -20,4 +21,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test output
-        run: echo ${{ tag }}
+        run: echo ${{ steps.tag-action.outputs.tag }}
