@@ -18,3 +18,6 @@ jobs:
           release_branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Test output
+        run: echo ${{ tag }}
