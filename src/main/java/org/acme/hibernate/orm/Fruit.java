@@ -21,6 +21,7 @@ public class Fruit {
     @GeneratedValue(generator = "fruitsSequence")
     private Integer id;
 
+
     @Column(length = 40, unique = true)
     private String name;
 
