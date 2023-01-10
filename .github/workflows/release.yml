@@ -21,4 +21,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test output
+        if: ${{ steps.tag-action.outputs.tag }} != null
         run: echo ${{ steps.tag-action.outputs.tag }}
