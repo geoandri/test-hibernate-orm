@@ -22,4 +22,4 @@ jobs:
 
       - name: Test output
         if: (${{ steps.tag-action.outputs.tag }} != '')
-        run: echo ${{ steps.tag-action.outputs.tag }}
+        run: echo ${{ steps.tag-action.outputs.tag }} karaba
