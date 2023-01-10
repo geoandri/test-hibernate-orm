@@ -21,5 +21,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test output
-        if: (${{ steps.tag-action.outputs.tag }} != '')
+        if: (${{ steps.tag-action.outputs.tag }} != ' ')
         run: echo karaba1 karaba2 ${{ steps.tag-action.outputs.tag }} karaba
